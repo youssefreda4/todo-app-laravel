@@ -14,7 +14,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     public function task(){
-        return $this->belongsTo(Task::class);
+        return $this->hasMany(Task::class);
     }
 
     /**

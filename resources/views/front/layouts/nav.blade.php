@@ -11,11 +11,8 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('tasks.view') }}">Tasks</a>
-                </li>
                 @guest
-                    <li class="nav-item">
+                <li class="nav-item">
                         <a class="nav-link active" href="{{ route('auth.login') }}">Login</a>
                     </li>
                     <li class="nav-item">
@@ -24,6 +21,9 @@
                 @endguest
 
                 @auth
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('tasks.view') }}">Tasks</a>
+                    </li>
                     <form action="{{ route('auth.logout') }}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-outline-light navigation--button">Logout</button>
