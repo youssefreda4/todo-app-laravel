@@ -14,6 +14,6 @@ class HomeController extends Controller
     {
         $users = User::limit(10)->get();
         $tasks = Task::with('user')->limit(10)->get();
-        return view('front.pages.home',compact('users','tasks'));
+        return view('front.pages.home',compact('users','tasks',));
     }
 }

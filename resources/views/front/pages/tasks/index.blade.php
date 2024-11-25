@@ -28,7 +28,6 @@
                         <td>{{ $task->title }}</td>
                         <td style="width: 350px;">{{ $task->description }}</td>
 
-
                         <td class="text-center">
                             <span
                                 class="badge bg-{{ $task->status === 'completed' ? 'success' : ($task->status === 'pending' ? 'danger' : 'warning') }} p-3 fs-5  w-100">
@@ -44,9 +43,9 @@
                                 <!-- Select Status -->
                                 <div class="form-group mt-3" style="flex-grow: 1;">
                                     <select name="status" class="form-select form-select-sm">
-                                        <option value="completed" {{ $task->status === 'completed' ? 'selected' : '' }}>✅
+                                        <option value="completed" {{ $task->status == 'completed' ? 'selected' : '' }}>✅
                                             Completed</option>
-                                        <option value="in progress" {{ $task->status === 'in progress' ? 'selected' : '' }}>
+                                        <option value="in progress" {{ $task->status == 'in progress' ? 'selected' : '' }}>
                                             🔄 In Progress</option>
                                         <option value="pending" {{ $task->status === 'pending' ? 'selected' : '' }}>⏳
                                             Pending</option>

@@ -11,7 +11,10 @@
     <!-- Sidebar Links -->
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a href="tasks.html" class="nav-link text-white">Tasks</a>
+            <a href="{{ route('dashboard.home') }}" class="nav-link text-white">Tasks</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('dashboard.create') }}" class="nav-link text-white">Add Task</a>
         </li>
         <li class="nav-item">
             <a href="settings.html" class="nav-link text-white">Settings</a>

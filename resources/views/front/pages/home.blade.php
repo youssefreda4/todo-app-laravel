@@ -9,9 +9,6 @@
                     @foreach ($users as $user)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ $user->name }}
-                            <span class="badge bg-success rounded-pill p-3 fs-5" style="width: 220px;">5 Tasks</span>
-
-
                         </li>
                     @endforeach
 
